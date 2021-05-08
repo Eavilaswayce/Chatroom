@@ -1,2 +1,2 @@
-# chatroom
+# Chatroom
  A simple chatroom application.
