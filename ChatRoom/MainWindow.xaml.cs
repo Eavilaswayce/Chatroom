@@ -171,6 +171,24 @@ namespace ChatRoom
         private void connectButton_Click(object sender, RoutedEventArgs e)
         {
             Connect();
+
+            Thread thread = new Thread(check);
+            thread.Start();
+        }
+
+        public void check()
+        {
+            while (true)
+            {
+                WebClient script = new WebClient();
+                string messages = script.DownloadString("http://82.9.208.217:8080/");
+                this.Dispatcher.Invoke(() =>
+                {
+                    bigBox.Document.Blocks.Clear();
+                    bigBox.Document.Blocks.Add(new Paragraph(new Run(messages)));
+                    //Debug.WriteLine(messages);
+                });
+            }
         }
 
         private void disconnectButton_Click(object sender, RoutedEventArgs e)
