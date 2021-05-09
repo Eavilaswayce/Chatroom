@@ -6,6 +6,7 @@ namespace ChatServer
 {
     class Program
     {
+        public static string MESSAGE { get; set; }
         static void Main(string[] args)
         {
             TcpListener server = null;
@@ -47,6 +48,7 @@ namespace ChatServer
                         // Translate data bytes to a ASCII string.
                         data = System.Text.Encoding.ASCII.GetString(bytes, 0, i);
                         Console.WriteLine($"Received: {data}");
+                        MESSAGE = data;
 
                         // Process the data sent by the client.
                         data = data.ToUpper();

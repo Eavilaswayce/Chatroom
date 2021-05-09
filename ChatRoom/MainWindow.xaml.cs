@@ -60,6 +60,7 @@ namespace ChatRoom
                 Int32 bytes = stream.Read(data, 0, data.Length);
                 responseData = System.Text.Encoding.ASCII.GetString(data, 0, bytes);
                 Debug.WriteLine($"Recieved: {responseData}");
+                bigBox.AppendText($"{username.Text}: {message}{Environment.NewLine}");
 
                 // Close Everything
                 stream.Close();

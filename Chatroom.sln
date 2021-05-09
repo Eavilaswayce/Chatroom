@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatRoom", "ChatRoom\ChatRoom.csproj", "{04B50512-60E1-4083-B202-B4DEFBC1628B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{044BDE56-ECBF-4030-93E7-D125CBC2607A} = {044BDE56-ECBF-4030-93E7-D125CBC2607A}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatServer", "ChatServer\ChatServer.csproj", "{044BDE56-ECBF-4030-93E7-D125CBC2607A}"
 EndProject
