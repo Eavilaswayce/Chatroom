@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Users\\garne\\source\\repos\\chatroom\\ChatServer\\ChatServer.csproj": {}
+    "C:\\Users\\adamr\\Desktop\\chatroom\\ChatServer\\ChatServer.csproj": {}
   },
   "projects": {
-    "E:\\Users\\garne\\source\\repos\\chatroom\\ChatServer\\ChatServer.csproj": {
+    "C:\\Users\\adamr\\Desktop\\chatroom\\ChatServer\\ChatServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Users\\garne\\source\\repos\\chatroom\\ChatServer\\ChatServer.csproj",
+        "projectUniqueName": "C:\\Users\\adamr\\Desktop\\chatroom\\ChatServer\\ChatServer.csproj",
         "projectName": "ChatServer",
-        "projectPath": "E:\\Users\\garne\\source\\repos\\chatroom\\ChatServer\\ChatServer.csproj",
-        "packagesPath": "C:\\Users\\garne\\.nuget\\packages\\",
-        "outputPath": "E:\\Users\\garne\\source\\repos\\chatroom\\ChatServer\\obj\\",
+        "projectPath": "C:\\Users\\adamr\\Desktop\\chatroom\\ChatServer\\ChatServer.csproj",
+        "packagesPath": "C:\\Users\\adamr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\adamr\\Desktop\\chatroom\\ChatServer\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\garne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\adamr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,8 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://www.myget.org/F/discord-net/api/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0-windows7.0": {

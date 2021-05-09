@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-E:\Users\garne\Source\Repos\chatroom\ChatServer\obj\Debug\net5.0-windows\
+C:\Users\adamr\Desktop\chatroom\ChatServer\obj\Debug\net5.0-windows\
 ChatServer
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
-E:\Users\garne\Source\Repos\chatroom\ChatServer\App.xaml
-11407045341
+C:\Users\adamr\Desktop\chatroom\ChatServer\App.xaml
+11127216816
 
-3-1233169557
+3-1357530527
 193-1891726104
-MainWindow.xaml;
+MainWindowServer.xaml;
 
-True
+False
 

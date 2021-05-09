@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bA+jkkmWGmSJjutL3tLdn6/kyMNGyNAe5nRGlVbqAp8+x791QOr3fpw7YDQYUFfxaJqJE/9VxUTGCDTZ4sgoGQ==",
+  "dgSpecHash": "qqbexY25qD6p3h43rGQQL+jqRpAXNu2D9e5KK1Y6qWePqrC+eM/TvcjEzzCav6rFn8rMlw69TH2U5qwDcwfypg==",
   "success": true,
-  "projectFilePath": "E:\\Users\\garne\\source\\repos\\chatroom\\ChatServer\\ChatServer.csproj",
+  "projectFilePath": "C:\\Users\\adamr\\Desktop\\chatroom\\ChatServer\\ChatServer.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
