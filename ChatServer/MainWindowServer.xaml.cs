@@ -91,7 +91,7 @@ namespace ChatServer
             }
             catch (SocketException e)
             {
-
+                Debug.WriteLine("SocketException: {0}", e);
             }
             finally
             {
