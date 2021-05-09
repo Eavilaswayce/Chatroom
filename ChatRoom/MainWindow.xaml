@@ -14,6 +14,7 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
             <RowDefinition Height="6*"/>
         </Grid.RowDefinitions>
         <DockPanel Margin="10" Grid.Column="0" Grid.Row="0">
@@ -26,6 +27,9 @@
             <Button ToolTip="Connect to Server" Content="Connect" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Button_Click"></Button>
         </DockPanel>
         <DockPanel Margin="10" Grid.ColumnSpan="3" Grid.Row="1">
+            <TextBox ToolTip="Chat Message" Background="red" PreviewKeyDown="TextBox_PreviewKeyDown"></TextBox>
+        </DockPanel>
+        <DockPanel Margin="10" Grid.ColumnSpan="3" Grid.Row="2">
             <RichTextBox ToolTip="Chat Message" Background="Teal"></RichTextBox>
         </DockPanel>
     </Grid>

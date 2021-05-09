@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\adamr\\Desktop\\chatroom\\ChatRoom\\ChatRoom.csproj": {}
+    "E:\\Users\\garne\\OneDrive\\Documents\\GitHub\\chatroom\\ChatRoom\\ChatRoom.csproj": {}
   },
   "projects": {
-    "C:\\Users\\adamr\\Desktop\\chatroom\\ChatRoom\\ChatRoom.csproj": {
+    "E:\\Users\\garne\\OneDrive\\Documents\\GitHub\\chatroom\\ChatRoom\\ChatRoom.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\adamr\\Desktop\\chatroom\\ChatRoom\\ChatRoom.csproj",
+        "projectUniqueName": "E:\\Users\\garne\\OneDrive\\Documents\\GitHub\\chatroom\\ChatRoom\\ChatRoom.csproj",
         "projectName": "ChatRoom",
-        "projectPath": "C:\\Users\\adamr\\Desktop\\chatroom\\ChatRoom\\ChatRoom.csproj",
-        "packagesPath": "C:\\Users\\adamr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\adamr\\Desktop\\chatroom\\ChatRoom\\obj\\",
+        "projectPath": "E:\\Users\\garne\\OneDrive\\Documents\\GitHub\\chatroom\\ChatRoom\\ChatRoom.csproj",
+        "packagesPath": "C:\\Users\\garne\\.nuget\\packages\\",
+        "outputPath": "E:\\Users\\garne\\OneDrive\\Documents\\GitHub\\chatroom\\ChatRoom\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\adamr\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\garne\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/discord-net/api/v3/index.json": {}
         },
         "frameworks": {
           "net5.0-windows7.0": {
