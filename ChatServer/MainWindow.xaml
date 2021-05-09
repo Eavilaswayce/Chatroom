@@ -1,9 +1,9 @@
-﻿<Window x:Class="Chatroom.MainWindow"
+﻿<Window x:Class="ChatServer.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Chatroom"
+        xmlns:local="clr-namespace:ChatServer"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
@@ -23,10 +23,10 @@
             <TextBox ToolTip="PORT" Text="PORT" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></TextBox>
         </DockPanel>
         <DockPanel Margin="10" Grid.Column="2" Grid.Row="0">
-            <Button ToolTip="Connect to Server" Content="Connect" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
+            <Button ToolTip="START SERVER" Content="START" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
         </DockPanel>
         <DockPanel Margin="10" Grid.ColumnSpan="3" Grid.Row="1">
-            <RichTextBox ToolTip="Chat Message" Background="Teal"></RichTextBox>
+            <RichTextBox ToolTip="IP" Background="Teal"></RichTextBox>
         </DockPanel>
     </Grid>
 </Window>

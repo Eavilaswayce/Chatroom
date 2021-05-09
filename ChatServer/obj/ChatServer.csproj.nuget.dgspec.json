@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Users\\garne\\Source\\Repos\\chatroom\\HellYeah\\Chatroom.csproj": {}
+    "E:\\Users\\garne\\source\\repos\\chatroom\\ChatServer\\ChatServer.csproj": {}
   },
   "projects": {
-    "E:\\Users\\garne\\Source\\Repos\\chatroom\\HellYeah\\Chatroom.csproj": {
+    "E:\\Users\\garne\\source\\repos\\chatroom\\ChatServer\\ChatServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Users\\garne\\Source\\Repos\\chatroom\\HellYeah\\Chatroom.csproj",
-        "projectName": "Chatroom",
-        "projectPath": "E:\\Users\\garne\\Source\\Repos\\chatroom\\HellYeah\\Chatroom.csproj",
+        "projectUniqueName": "E:\\Users\\garne\\source\\repos\\chatroom\\ChatServer\\ChatServer.csproj",
+        "projectName": "ChatServer",
+        "projectPath": "E:\\Users\\garne\\source\\repos\\chatroom\\ChatServer\\ChatServer.csproj",
         "packagesPath": "C:\\Users\\garne\\.nuget\\packages\\",
-        "outputPath": "E:\\Users\\garne\\Source\\Repos\\chatroom\\HellYeah\\obj\\",
+        "outputPath": "E:\\Users\\garne\\source\\repos\\chatroom\\ChatServer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\garne\\AppData\\Roaming\\NuGet\\NuGet.Config",
