@@ -189,7 +189,7 @@ namespace ChatRoom
                 {
                     bigBox.Document.Blocks.Clear();
                     bigBox.Document.Blocks.Add(new Paragraph(new Run(messages)));
-                    bigBox.CaretPosition = bigBox.CaretPosition.DocumentEnd;
+                    bigBox.ScrollToEnd();
                 });
             }
 
