@@ -172,13 +172,16 @@ namespace ChatRoom
         {
             Connect();
 
+            chatStream = true;
             Thread thread = new Thread(check);
             thread.Start();
         }
 
+        public bool chatStream;
+
         public void check()
         {
-            while (true)
+            while (chatStream == true)
             {
                 WebClient script = new WebClient();
                 string messages = script.DownloadString("http://82.9.208.217:8080/");
@@ -189,17 +192,22 @@ namespace ChatRoom
                     bigBox.CaretPosition = bigBox.CaretPosition.DocumentEnd;
                 });
             }
+
+            this.Dispatcher.Invoke(() =>
+            {
+                bigBox.AppendText($"{Environment.NewLine}Disonnected.");
+            });
         }
 
         private void disconnectButton_Click(object sender, RoutedEventArgs e)
         {
             try
             {
+                chatStream = false;
                 client.Shutdown(SocketShutdown.Both);
                 client.Close();
-                bigBox.AppendText($"{Environment.NewLine}Disonnected.");
             }
-            catch (Exception ex)
+            catch
             {
                 MessageBox.Show($"You are not connected to the ChatRoom.", "ChatRoom", MessageBoxButton.OK, MessageBoxImage.Error);
             }
@@ -219,14 +227,11 @@ namespace ChatRoom
         {
             try
             {
+                chatStream = false;
                 client.Shutdown(SocketShutdown.Both);
                 client.Close();
-                bigBox.AppendText($"{Environment.NewLine}Disonnected.");
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"You are not connected to the ChatRoom.", "ChatRoom", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
+            catch { }
         }
     }
 }
