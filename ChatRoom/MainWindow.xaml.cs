@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
@@ -60,7 +61,7 @@ namespace ChatRoom
                 Int32 bytes = stream.Read(data, 0, data.Length);
                 responseData = System.Text.Encoding.ASCII.GetString(data, 0, bytes);
                 Debug.WriteLine($"Recieved: {responseData}");
-                bigBox.AppendText($"{username.Text}: {message}{Environment.NewLine}");
+                //bigBox.AppendText($"{username.Text}: {message}{Environment.NewLine}");
 
                 // Close Everything
                 stream.Close();
