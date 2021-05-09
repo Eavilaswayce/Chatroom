@@ -186,7 +186,7 @@ namespace ChatRoom
                 {
                     bigBox.Document.Blocks.Clear();
                     bigBox.Document.Blocks.Add(new Paragraph(new Run(messages)));
-                    //Debug.WriteLine(messages);
+                    bigBox.CaretPosition = bigBox.CaretPosition.DocumentEnd;
                 });
             }
         }
@@ -209,8 +209,23 @@ namespace ChatRoom
         {
             if (e.Key == Key.Enter)
             {
-                Send(client, chatBox.Text);
+                Send(client, usernameTextBox.Text + " : " + chatBox.Text);
+                
                 chatBox.Text = "";
+            }
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            try
+            {
+                client.Shutdown(SocketShutdown.Both);
+                client.Close();
+                bigBox.AppendText($"{Environment.NewLine}Disonnected.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"You are not connected to the ChatRoom.", "ChatRoom", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }
