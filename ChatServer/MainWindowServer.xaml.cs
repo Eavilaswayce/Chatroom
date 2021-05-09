@@ -30,7 +30,7 @@ namespace ChatServer
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var poop = 1;
+            ServerAccess();
         }
 
         static void ServerAccess()

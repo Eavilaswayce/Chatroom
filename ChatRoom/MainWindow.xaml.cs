@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
@@ -40,17 +41,45 @@ namespace ChatRoom
                 TcpClient client = new TcpClient(server, port);
 
                 // Translate the passed message into ASCII and store it as a Byte array.
-                Byte[] data = System.Text.Encoding.ASCII.GetBytes(message);
+                byte[] data = System.Text.Encoding.ASCII.GetBytes(message);
 
                 // Get a client stream for reading and writing.
                 NetworkStream stream = client.GetStream();
 
                 // Send the message to the connected TcpServer.
                 stream.Write(data, 0, data.Length);
-            }
-            catch
-            {
+                Debug.WriteLine($"Sent: {message}");
 
+                // Buffer to store the response bytes.
+                data = new byte[256];
+
+                // String to store the response ASCII representation.
+                string responseData = string.Empty;
+
+                // Read the first batch of the TcpServer response bytes.
+                Int32 bytes = stream.Read(data, 0, data.Length);
+                responseData = System.Text.Encoding.ASCII.GetString(data, 0, bytes);
+                Debug.WriteLine($"Recieved: {responseData}");
+
+                // Close Everything
+                stream.Close();
+                client.Close();
+            }
+            catch (ArgumentNullException e)
+            {
+                Debug.WriteLine($"ArgumentNullException: {e}");
+            }
+            catch (SocketException e)
+            {
+                Debug.WriteLine($"SocketException: {e}");
+            }
+        }
+
+        private void chatBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                Connect(ipTextBox.Text, chatBox.Text);
             }
         }
     }
