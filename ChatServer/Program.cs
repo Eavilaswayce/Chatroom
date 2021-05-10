@@ -125,7 +125,7 @@ namespace ChatServer
                     Console.WriteLine("Read {0} bytes from socket. \n Data : {1}",
                         content.Length, content);
 
-                    File.AppendAllText("D:\\index.txt", Environment.NewLine + content);
+                    File.AppendAllText("D:\\Webpage\\index.txt", Environment.NewLine + content);
                 }
             }
 

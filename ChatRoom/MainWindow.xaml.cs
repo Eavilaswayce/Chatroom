@@ -143,6 +143,16 @@ namespace ChatRoom
             {
                 client.BeginSend(byteData, 0, byteData.Length, 0, new AsyncCallback(SendCallback), client);
                 ReConnect();
+
+                WebClient wc = new WebClient();
+                string messages = wc.DownloadString("http://82.9.208.217:8080/");
+
+                this.Dispatcher.Invoke(() =>
+                {
+                    bigBox.Document.Blocks.Clear();
+                    bigBox.Document.Blocks.Add(new Paragraph(new Run(messages)));
+                    bigBox.ScrollToEnd();
+                });
             }
             catch (Exception ex)
             {
@@ -175,28 +185,33 @@ namespace ChatRoom
             Connect();
 
             chatStream = true;
-            Thread thread = new Thread(check);
+            Thread thread = new Thread(Check);
             thread.Start();
         }
 
         public bool chatStream;
 
-        public void check()
+        public void Check()
         {
-            while (true)
+            while (chatStream == true)
             {
-                wc.LoadAllData();
-            }
-            /*while (chatStream == true)
-            {
-                Task.Delay(1000);
-                wc.LoadAllData();
+                WebClient wc = new WebClient();
+                string messages = wc.DownloadString("http://82.9.208.217:8080/");
+
+                this.Dispatcher.Invoke(() =>
+                {
+                    bigBox.Document.Blocks.Clear();
+                    bigBox.Document.Blocks.Add(new Paragraph(new Run(messages)));
+                    bigBox.ScrollToEnd();
+                });
+
+                Task.Delay(100);
             }
 
             this.Dispatcher.Invoke(() =>
             {
                 bigBox.AppendText($"{Environment.NewLine}Disonnected.");
-            });*/
+            });
         }
 
         private void disconnectButton_Click(object sender, RoutedEventArgs e)
@@ -217,11 +232,8 @@ namespace ChatRoom
         {
             if (e.Key == Key.Enter)
             {
-                Send(client, usernameTextBox.Text + " : " + chatBox.Text);
-                
+                Send(client, usernameTextBox.Text + ": " + chatBox.Text);      
                 chatBox.Text = "";
-                //Debug.WriteLine(wc.flopper());
-                Debug.WriteLine(wc.msg.text);
             }
         }
 
