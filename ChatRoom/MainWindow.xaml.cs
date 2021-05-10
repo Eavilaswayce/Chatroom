@@ -232,7 +232,7 @@ namespace ChatRoom
         {
             if (e.Key == Key.Enter)
             {
-                Send(client, usernameTextBox.Text + ": " + chatBox.Text);      
+                Send(client, DateTime.Now.ToString("h:mm:ss tt") + " - " + usernameTextBox.Text + ": " + chatBox.Text);      
                 chatBox.Text = "";
             }
         }
