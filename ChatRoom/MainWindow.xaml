@@ -38,7 +38,13 @@
             <TextBox x:Name="chatBox" ToolTip="Chat Message" Background="red" KeyDown="chatBox_KeyDown"></TextBox>
         </DockPanel>
         <DockPanel Margin="10" Grid.ColumnSpan="5" Grid.Row="2">
-            <RichTextBox x:Name="bigBox" ToolTip="Chat Message" Background="Teal"></RichTextBox>
+            <RichTextBox x:Name="bigBox" Background="Teal">
+                <FlowDocument PageHeight="180">
+                    <Paragraph>
+                        <Run Text="{Binding msg.text, Mode=TwoWay}"/>
+                    </Paragraph>
+                </FlowDocument>
+            </RichTextBox>
         </DockPanel>
     </Grid>
 </Window>

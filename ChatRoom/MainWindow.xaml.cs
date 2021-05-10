@@ -27,10 +27,12 @@ namespace ChatRoom
     {
         public Socket client;
         public string confirmation;
+        WebsiteChecker wc = new WebsiteChecker();
 
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = wc;
         }
 
         // State object for receiving data from remote device.  
@@ -181,22 +183,20 @@ namespace ChatRoom
 
         public void check()
         {
-            while (chatStream == true)
+            while (true)
             {
-                WebClient script = new WebClient();
-                string messages = script.DownloadString("http://82.9.208.217:8080/");
-                this.Dispatcher.Invoke(() =>
-                {
-                    bigBox.Document.Blocks.Clear();
-                    bigBox.Document.Blocks.Add(new Paragraph(new Run(messages)));
-                    bigBox.ScrollToEnd();
-                });
+                wc.LoadAllData();
+            }
+            /*while (chatStream == true)
+            {
+                Task.Delay(1000);
+                wc.LoadAllData();
             }
 
             this.Dispatcher.Invoke(() =>
             {
                 bigBox.AppendText($"{Environment.NewLine}Disonnected.");
-            });
+            });*/
         }
 
         private void disconnectButton_Click(object sender, RoutedEventArgs e)
@@ -220,6 +220,8 @@ namespace ChatRoom
                 Send(client, usernameTextBox.Text + " : " + chatBox.Text);
                 
                 chatBox.Text = "";
+                //Debug.WriteLine(wc.flopper());
+                Debug.WriteLine(wc.msg.text);
             }
         }
 
